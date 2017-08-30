@@ -8,7 +8,7 @@
             "email": "miracsengonul@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {"php": ">=5.2.0"},
      "autoload": {
 	 "psr-4": {

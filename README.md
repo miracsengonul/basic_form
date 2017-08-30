@@ -322,3 +322,5 @@ use mirac\BasicForm\Form;
 
 
 > Kütüphane örnekte gösterildiği şekilde çalışmaktadır.
+
+![ekran_goruntusu](http://image.ibb.co/kQ9Obk/ana_goruntu.png) 

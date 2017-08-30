@@ -1,5 +1,5 @@
 {
-    "name": "mirac/src",
+    "name": "miracsengonul/basic_form",
     "description": "PHP Basic Form HTML Builder",
     "type": "library",
     "authors": [
@@ -9,7 +9,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {"php": ">=5.2.0"},
      "autoload": {
 	 "psr-4": {
 		"mirac\\BasicForm\\": "src"

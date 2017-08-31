@@ -16,18 +16,20 @@ Class Form
     /**
      * Form Open Tag
      * Form::open('Route','Method',Array)
+     *
      * @param string $action
      * @param string $method
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function open($action, $method, array $custom_field = NULL)
+    static public function open($action, $method, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $open_array[] = $key . '="' . $value . '"';
             }
-            $open_array = implode(' ', $ac_array);
+            $open_array = implode(' ', $open_array);
         } else {
             $open_array = NULL;
         }
@@ -38,13 +40,15 @@ Class Form
     /**
      * Form Input Generate
      * /Form::input(Array)
-     * @param array|NULL $custom_field
+     *
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function input(array $custom_field = NULL)
+    static public function input(array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $input_array[] = $key . '="' . $value . '"';
             }
             $input_array = implode(' ', $input_array);
@@ -58,14 +62,16 @@ Class Form
     /**
      * Form Input Date
      * Form::date(Name,Array)
+     *
      * @param $name
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function date($name, array $custom_field = NULL)
+    static public function date($name, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $input_date_array[] = $key . '="' . $value . '"';
             }
             $input_date_array = implode(' ', $input_date_array);
@@ -79,14 +85,16 @@ Class Form
     /**
      * Form Input Mail
      * Form::mail(Name,Array)
+     *
      * @param $name
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function mail($name, array $custom_field = NULL)
+    static public function mail($name, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $input_mail_array[] = $key . '="' . $value . '"';
             }
             $input_mail_array = implode(' ', $input_mail_array);
@@ -100,14 +108,16 @@ Class Form
     /**
      * Form Input Password
      * Form::pass(Name,Array)
+     *
      * @param $name
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function pass($name, array $custom_field = NULL)
+    static public function pass($name, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $input_pass_array[] = $key . '="' . $value . '"';
             }
             $input_pass_array = implode(' ', $input_pass_array);
@@ -121,14 +131,16 @@ Class Form
     /**
      * Form Input Text
      * Form::text(Name,Array)
+     *
      * @param $name
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function text($name, array $custom_field = NULL)
+    static public function text($name, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $input_text_array[] = $key . '="' . $value . '"';
             }
             $input_text_array = implode(' ', $input_text_array);
@@ -142,15 +154,17 @@ Class Form
     /**
      * Forum Submit Input
      * Form::submit(Name,Value,Array)
+     *
      * @param $name
-     * @param $value
-     * @param array|NULL $custom_field
+     * @param $deger
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function submit($name, $deger, array $custom_field = NULL)
+    static public function submit($name, $deger, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $input_submit_array[] = $key . '="' . $value . '"';
             }
             $input_submit_array = implode(' ', $input_submit_array);
@@ -164,14 +178,16 @@ Class Form
     /**
      * Textarea Generate
      * Form::textarea(Name,Array)
+     *
      * @param $name
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function textarea($name, array $custom_field = NULL)
+    static public function textarea($name, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $textarea_array[] = $key . '="' . $value . '"';
             }
             $textarea_array = implode(' ', $textarea_array);
@@ -184,15 +200,17 @@ Class Form
 
     /**
      * Select Input
+     *
      * @param $name
      * @param array $options
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function select($name, array $options, array $custom_field = NULL)
+    static public function select($name, array $options, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $select_array[] = $key . '="' . $value . '"';
             }
             $select_array = implode(' ', $select_array);
@@ -210,15 +228,17 @@ Class Form
 
     /**
      * Label Generate
+     *
      * @param $name
      * @param $for
-     * @param array|NULL $custom_field
+     * @param array|NULL $custom_fields
+     *
      * @return string
      */
-    static public function label($name, $for, array $custom_field = NULL)
+    static public function label($name, $for, array $custom_fields = NULL)
     {
-        if ($custom_field != NULL) {
-            foreach ($custom_field as $key => $value) {
+        if ($custom_fields != NULL) {
+            foreach ($custom_fields as $key => $value) {
                 $label_array[] = $key . '="' . $value . '"';
             }
             $label_array = implode(' ', $label_array);
@@ -237,6 +257,5 @@ Class Form
     {
         return '</form>';
     }
-
 
 }

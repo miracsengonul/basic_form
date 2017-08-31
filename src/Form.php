@@ -2,6 +2,8 @@
 
 namespace mirac\BasicForm;
 
+use mirac\BasicForm\Attributes\FormAttributes;
+
 /**
  * Class Form
  *
@@ -11,29 +13,19 @@ namespace mirac\BasicForm;
 
 Class Form
 {
-
-
     /**
      * Form Open Tag
-     * Form::open('Route','Method',Array)
+     *
+     * Form::open('Method', 'Route')
      *
      * @param string $action
-     * @param string $method
-     * @param array|NULL $custom_fields
+     * @param string|null $method
      *
-     * @return string
+     * @return FormAttributes
      */
-    static public function open($action, $method, array $custom_fields = NULL)
+    static public function open($method, $action = null)
     {
-        if ($custom_fields != NULL) {
-            foreach ($custom_fields as $key => $value) {
-                $open_array[] = $key . '="' . $value . '"';
-            }
-            $open_array = implode(' ', $open_array);
-        } else {
-            $open_array = NULL;
-        }
-        return '<form action="' . $action . '" method="' . $method . '" ' . $open_array . '>';
+        return FormAttributes::factory($method, $action);
     }
 
 

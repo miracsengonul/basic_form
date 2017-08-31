@@ -1,6 +1,8 @@
 <?php
 
-require_once('Form.php');
+use mirac\BasicForm\Form;
+
+require_once '../vendor/autoload.php';
 
 ?>
 
@@ -15,21 +17,19 @@ require_once('Form.php');
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">KolayForm</a>
+            <a class="navbar-brand" href="#">BasicForm</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Anasayfa</a></li>
-            <li><a href="#">Sayfa 1</a></li>
-            <li><a href="#">Sayfa 2</a></li>
-            <li><a href="#">Sayfa 3</a></li>
+            <li class="active"><a href="#">Main Page</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
         </ul>
     </div>
 </nav>
 <div class="col-md-12">
 
-
-
-    <?php echo Form::open('google.com','POST',NULL); ?>
+    <?php echo Form::open('POST', 'google.com'); ?>
     <div class="form-group">
         <?php
         echo Form::label('İsminizi Giriniz','isim');

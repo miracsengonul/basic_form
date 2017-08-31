@@ -57,13 +57,12 @@ use mirac\BasicForm\Form;
 
 #Array parametresi ile elementlere custom olarak tanımlayacabileceğiniz özellikler eklemeniz mümkündür.
 
-Form::open('Hedef','Method',Array)
+Form::open('Hedef','Method')
 
 ```php
 
-Form::open('Kaydet','POST',NULL);
-Form::open('Kaydet','GET',['id'=>'5','name'=>'kaydet']);
 Form::open('Kaydet','POST');
+Form::open('Kaydet','GET');
 ```
 
 <a href="#ozel-input"></a>

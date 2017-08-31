@@ -16,9 +16,11 @@ Class Form
     /**
      * Form Open Tag
      * Form::open('Route','Method',Array)
+     *
      * @param string $action
      * @param string $method
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function open($action, $method, array $custom_field = NULL)
@@ -38,7 +40,9 @@ Class Form
     /**
      * Form Input Generate
      * /Form::input(Array)
+     *
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function input(array $custom_field = NULL)
@@ -58,8 +62,10 @@ Class Form
     /**
      * Form Input Date
      * Form::date(Name,Array)
+     *
      * @param $name
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function date($name, array $custom_field = NULL)
@@ -79,8 +85,10 @@ Class Form
     /**
      * Form Input Mail
      * Form::mail(Name,Array)
+     *
      * @param $name
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function mail($name, array $custom_field = NULL)
@@ -100,8 +108,10 @@ Class Form
     /**
      * Form Input Password
      * Form::pass(Name,Array)
+     *
      * @param $name
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function pass($name, array $custom_field = NULL)
@@ -121,8 +131,10 @@ Class Form
     /**
      * Form Input Text
      * Form::text(Name,Array)
+     *
      * @param $name
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function text($name, array $custom_field = NULL)
@@ -142,9 +154,11 @@ Class Form
     /**
      * Forum Submit Input
      * Form::submit(Name,Value,Array)
+     *
      * @param $name
-     * @param $value
+     * @param $deger
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function submit($name, $deger, array $custom_field = NULL)
@@ -164,8 +178,10 @@ Class Form
     /**
      * Textarea Generate
      * Form::textarea(Name,Array)
+     *
      * @param $name
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function textarea($name, array $custom_field = NULL)
@@ -184,9 +200,11 @@ Class Form
 
     /**
      * Select Input
+     *
      * @param $name
      * @param array $options
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function select($name, array $options, array $custom_field = NULL)
@@ -210,9 +228,11 @@ Class Form
 
     /**
      * Label Generate
+     *
      * @param $name
      * @param $for
      * @param array|NULL $custom_field
+     *
      * @return string
      */
     static public function label($name, $for, array $custom_field = NULL)
@@ -237,6 +257,5 @@ Class Form
     {
         return '</form>';
     }
-
 
 }

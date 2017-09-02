@@ -148,12 +148,12 @@ Class Form
      * Form::submit(Name,Value,Array)
      *
      * @param $name
-     * @param $deger
+     * @param $value
      * @param array|NULL $custom_fields
      *
      * @return string
      */
-    static public function submit($name, $deger, array $custom_fields = NULL)
+    static public function submit($name, $value, array $custom_fields = NULL)
     {
         if ($custom_fields != NULL) {
             foreach ($custom_fields as $key => $value) {
@@ -163,7 +163,7 @@ Class Form
         } else {
             $input_submit_array = NULL;
         }
-        return '<input type="submit" value="' . $deger . '" name="' . $name . '" ' . $input_submit_array . '>';
+        return '<input type="submit" value="' . $value . '" name="' . $name . '" ' . $input_submit_array . '>';
     }
 
 
